@@ -1,0 +1,82 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+h1{
+  font-family:cursive;
+}
+.container{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.subContainer{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.profilePic{
+  width:30%;
+  height:30%;
+}
+
+
+ol {
+  text-align: left;
+}
+
+input {
+  display: none;
+}
+
+
+label {
+  display: block;    
+  padding: 5px 10px;
+  margin: 0 0 5px 0;
+  background: rgb(181, 9, 9);
+  border-radius: 5px;
+  color: #FFF;
+  transition: ease .5s;
+  position:relative;
+  cursor: pointer;
+}
+
+label:hover {
+  background: rgb(225, 66, 66);
+}
+
+.content {
+  background: rgb(255, 213, 213);;
+  padding: 5px 5px;
+  /* border: 1px solid #5a0606; */
+  margin: 0 0 10px 0;
+  border-radius: 3px;
+}
+
+input + label + .content {
+  display: none;
+}
+
+input:checked + label + .content {
+  display: block;
+}
+
+label::after {
+  content: '+';
+  font-size: 22px;
+  font-weight: bold;
+  position: absolute;
+  right: 10px;
+  top: 0px;
+}
+
+input:checked + label::after {
+  content: '–';
+  right: 12px;
+}
